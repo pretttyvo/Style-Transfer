@@ -46,7 +46,7 @@ app.config['SECRET_KEY'] = 'super secret key'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 # read in csv
-art_df = pd.read_csv(url_for('static', filename='csv/artist_and_art_titles.csv'))
+art_df = pd.read_csv('static/csv/artist_and_art_titles.csv')
 
 # enable eager execution
 tf.enable_eager_execution()

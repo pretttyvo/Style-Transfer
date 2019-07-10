@@ -8,14 +8,14 @@ import tensorflow as tf
 import tensorflow.contrib.eager as tfe
 
 # import transfer_tools
-from .transfer_tools import run_style_transfer
+from transfer_tools import run_style_transfer
 
-from .clean_up_gallery import (
+from clean_up_gallery import (
     cleaning,
     pull_files
 )
 
-from .gif_generator import(
+from gif_generator import(
     gif_generator
 )
 

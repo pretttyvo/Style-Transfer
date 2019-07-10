@@ -43,8 +43,9 @@ var quality;
     document.getElementById("h2_result").removeAttribute("hidden")
     document.getElementById("h5_result").removeAttribute("hidden")
     document.getElementById("quality_show").removeAttribute("hidden")
-    document.getElementById("").removeAttribute("hidden")
+    document.getElementById("download").removeAttribute("hidden")
     document.getElementById("submit_final").style.display = version.innerHTML;
+    document.getElementById("submit_button").style.display = version.innerHTML;
     
 
     console.log(version.innerHTML)

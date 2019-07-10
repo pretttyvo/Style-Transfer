@@ -72,19 +72,19 @@ def upload_file():
         data = request.form['quality'] #get iterations
         final_img_name = request.form['final_image_input'] #get unique file name
 
-        if request.form['style-library-selected']: #if style from library
+        if request.files.get('style'): #if style uploaded
+            file = request.files['style']
+            print(file)
+            filename = file.filename
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+        elif request.form['style-library-selected']: #if style from library
             style2 = request.form['style-library-selected']
             artist = style2.split("/")[4]
             title = (style2.split("/")[5]).split(".")[0]
             name = f'{artist}_{title}'
             save_image = os.path.join("static/uploads", f'{name}.jpg') #save image
             urllib.request.urlretrieve(style2, save_image) #save the image from the url
-
-        if request.files.get('style'): #if style uploaded
-            file = request.files['style']
-            print(file)
-            filename = file.filename
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         if request.files.get('content'): #get content
             file = request.files['content']

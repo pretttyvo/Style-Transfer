@@ -34,7 +34,7 @@ var quality;
 
     document.getElementById("content-place-holder").src=contentPath.innerHTML;
     document.getElementById("style-place-holder").src=stylePath.innerHTML;
-    document.getElementById("img-fluid").src=best.innerHTML;
+    document.getElementById("best_img").src=best.innerHTML;
     document.getElementById("form_row").style.display = version.innerHTML;
     document.getElementById("carouselExampleIndicators").style.display = version.innerHTML;
     document.getElementById("cool-content-h2").removeAttribute("hidden")
